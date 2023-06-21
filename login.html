@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Create Account and Profile</title>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
   <style>
     body {
       font-family: Arial, sans-serif;
       background-color: #f2f2f2;
+    }
+
+    .login {
+      position: relative;
     }
 
     .container {
@@ -23,7 +30,8 @@
 
     label {
       display: block;
-      margin-bottom: 10px;
+      margin-bottom: 1px;
+      margin-top: 15px;
     }
 
     input[type="text"],
@@ -37,9 +45,10 @@
     }
 
     input[type="submit"] {
+      margin-top: 30px;
       width: 100%;
       padding: 10px;
-      background-color: #4caf50;
+      background-color: #494e49;
       border: none;
       color: #fff;
       font-weight: bold;
@@ -48,25 +57,30 @@
     }
 
     input[type="submit"]:hover {
-      background-color: #45a049;
+      background-color: #0d0a0e;
     }
   </style>
 </head>
+
 <body>
-  <div class="container">
-    <h2>Create Account</h2>
-    <form>
-      <label for="username">Username</label>
-      <input type="text" id="username" name="username" required>
+  <div class="login">
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
+    <div class="container">
+      <h2>Create Account</h2>
+      <form>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
 
-      <label for="password">Password</label>
-      <input type="password" id="password" name="password" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
 
-      <input type="submit" value="Create Account">
-    </form>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+
+        <input type="submit" value="Create Account">
+      </form>
+    </div>
   </div>
 </body>
+
 </html>
