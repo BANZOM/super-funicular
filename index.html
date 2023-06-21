@@ -1,28 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Super Funicular</title>
-        <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Super Funicular</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    </head>
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+</head>
 
-        <main>
-            
-            <!-- <section class="featured-post">
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="section">
+                <div class="top_navbar">
+                    <div class="hamburger">
+                        <a href="#">
+                            <i class="fas fa-bars"></i>
+                        </a>
+                    </div>
+                    <div class="logo"><a href="index.html"><img src="assets/FunicularLogo-black.png"
+                                alt="FunicularLogo"></a></div>
+                </div>
+
+            </div>
+            <div class="sidebar">
+
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fas fa-home"></i></span>
+                            <span class="item">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fas fa-desktop"></i></span>
+                            <span class="item">Blogs</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fas fa-user-friends"></i></span>
+                            <span class="item">Our Team</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="login.html">
+                            <span class="icon"><i class="fas fa-user-shield"></i></span>
+                            <span class="item">Login</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- <section class="featured-post">
                 <h2>Featured Post BANZO</h2>
                 <article>
                     <h3>Post Title</h3>
@@ -52,40 +93,44 @@
                     <a href="#">Read More</a>
                 </article>
             </section> -->
-        </main>
+    </main>
 
-        <footer class="container-fluid bg-grey py-5">
-            <div class="container">
-    
-                <div class="logo-part" style="border-bottom: 1px solid #232323;">
-                    <a href="#"><img src="assets/FunicularLogo.png" class="w-50 logo-footer" alt="Funicular Logo"
-                            height="100px" width="auto" />
-                    </a>
-                    <p>
-                        &copy; 2023 Funicular. 
-                    </p>
-                    <p id="designer">Designed by Aditya Panwar, Aditya Tomar & Akshit Tyagi.</p>
-                    <div class="social-icons">
-                        <a href="https://www.instagram.com/adityapanwarrr/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/profile.php?id=100009645782825" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://www.linkedin.com/in/adityapanwars/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://twitter.com/adityapanwarr" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="https://github.com/BANZOM" target="_blank"><i class="fa-brands fa-github"></i></a>
-                    </div>
-    
+    <footer class="container-fluid bg-grey py-5">
+        <div class="container">
+
+            <div class="logo-part" style="border-bottom: 1px solid #232323;">
+                <a href="#"><img src="assets/FunicularLogo.png" class="w-50 logo-footer" alt="Funicular Logo"
+                        height="100px" width="auto" />
+                </a>
+                <p>
+                    &copy; 2023 Funicular.
+                </p>
+                <p id="designer">Designed by Aditya Panwar, Aditya Tomar & Akshit Tyagi.</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/adityapanwarrr/" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100009645782825" target="_blank"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/adityapanwars/" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://twitter.com/adityapanwarr" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://github.com/BANZOM" target="_blank"><i class="fa-brands fa-github"></i></a>
                 </div>
-                <div class="footerNav">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="" target="_blank">Contact Us</a></li>
-                        <li><a href="" target="_blank">Privacy policy</a></li>
-                        <li><a href="">Our Team</a></li>
-                        <li><a href="https://banzo.carrd.co/" target="_blank">Personal Website</a></li>
-                    </ul>
-                </div>
+
             </div>
-        </footer>
+            <div class="footerNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="" target="_blank">Contact Us</a></li>
+                    <li><a href="" target="_blank">Privacy policy</a></li>
+                    <li><a href="">Our Team</a></li>
+                    <li><a href="https://banzo.carrd.co/" target="_blank">Personal Website</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
-        <script src="js/script.js"></script>
-    </body>
+    <script src="js/script.js"></script>
+</body>
+
 </html>
