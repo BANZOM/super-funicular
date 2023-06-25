@@ -1,7 +1,27 @@
-var hamburger = document.querySelector(".hamburger");
-hamburger.addEventListener("click", function () {
-    document.querySelector("body").classList.toggle("active");
+// javascript code to toggle class
+document.querySelectorAll('.header .btn').forEach(function (button) {
+    button.addEventListener('click', function () {
+        this.classList.toggle('click');
+        document.querySelector('.header .sidebar').classList.toggle('show');
+    });
 });
+
+function viewHidden() {
+    var hiddenElements = document.querySelectorAll('.blog-card');
+    for (var i = 3; i < hiddenElements.length; i++) {
+        if (hiddenElements[i].hidden == true) {
+            hiddenElements[i].hidden = false;
+            // console.log(hiddenElements[i].hidden);
+            // changing the content to NO more Articles
+            document.querySelector('.articles p').innerHTML = "No More Articles";
+
+        }
+        else {
+            hiddenElements[i].hidden = true;
+            document.querySelector('.articles p').innerHTML = "View More Articles";
+        }
+    }
+}
 
 function validateForm() {
     const username = document.getElementById("username").value;
@@ -15,7 +35,7 @@ function validateForm() {
     }
 
     // Check if username is alphanumeric
-    const usernameRegex = /^[a-z0-9]+$/i;
+    const usernameRegex = /^[a-zA-Z0-9]{3,16}$/;
     if (!usernameRegex.test(username)) {
         alert("Username must be alphanumeric.");
         return false;
@@ -35,11 +55,11 @@ function validateForm() {
     }
 
     // Check if password contains at least one number and one letter
-    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     if (!passwordRegex.test(password)) {
         alert("Password must contain at least one number and one letter.");
         return false;
     }
 
-    return true;
+    return alert("Form submitted.");
 }

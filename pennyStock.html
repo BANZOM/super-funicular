@@ -31,23 +31,24 @@
                 </div>
             </div>
             <div class="rightblock">
-
+                <!-- for balancing the content of top bar -->
             </div>
         </div>
         <nav class="sidebar">
             <div class="text">Menu</div>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Blogs</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Blogs</a></li>
                 <li><a href="#" id="team">Our Team <span class="fa fa-caret-down"></span></a>
 
                     <ul>
-                        <li><a href="aditya">Aditya</a></li>
-                        <li><a href="Adityatomar">Aditya Tomar</a></li>
-                        <li><a href="Akshit">Akshit Tyagi</a></li>
+                        <li><a href="https://www.linkedin.com/in/adityapanwars/">Aditya</a></li>
+                        <li><a href="https://www.linkedin.com/in/aditya-tomar-aba6b222b/">Aditya Tomar</a></li>
+                        <li><a href="https://www.linkedin.com/in/adityapanwars/">Akshit Tyagi</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="https://banzo.carrd.co/">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
             </ul>
         </nav>
     </header>
@@ -155,34 +156,7 @@
     </footer>
 
 
-    <script>
-        // javascript code to toggle class
-        document.querySelectorAll('.header .btn').forEach(function (button) {
-            button.addEventListener('click', function () {
-                this.classList.toggle('click');
-                document.querySelector('.header .sidebar').classList.toggle('show');
-            });
-        });
-
-        function viewHidden() {
-            var hiddenElements = document.querySelectorAll('.blog-card');
-            for (var i = 3; i < hiddenElements.length; i++) {
-                if (hiddenElements[i].hidden == true) {
-                    hiddenElements[i].hidden = false;
-                    // console.log(hiddenElements[i].hidden);
-                    // changing the content to NO more Articles
-                    document.querySelector('.articles p').innerHTML = "No More Articles";
-
-                }
-                else {
-                    hiddenElements[i].hidden = true;
-                    document.querySelector('.articles p').innerHTML = "View More Articles";
-                }
-            }
-        }
-
-
-    </script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
