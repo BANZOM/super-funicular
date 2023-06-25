@@ -58,6 +58,14 @@ hr#short{
     margin-right: auto;
     /* margin-bottom: ; */
 }
+.tableBlogs div{
+    text-align: center;
+}
+.tableBlogs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 main h3{
     margin-top: 12px;
 }
