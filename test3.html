@@ -227,7 +227,7 @@
     <main>
         <div class="main-body">
             <div class="main-content">
-                <!-- Context from Code Snippet index.html:<div class="main"> -->
+                <!-- Context from Code Snippet index.html: from main -->
                 <h3 style="text-align: center; font-size: medium;">Latest Guides & News</h3>
                 <hr id="short">
 
@@ -511,11 +511,11 @@
 
         // javascript to show hidden blogcards
         function viewHidden() {
-            for (let i = 0; i < document.querySelectorAll('.blog-card').length; i++) {
-                document.querySelectorAll('.blog-card')[i].hidden = false;
+            var hiddenElements = document.querySelectorAll('.blog-card');
+            for (var i = 0; i < hiddenElements.length; i++) {
+                hiddenElements[i].hidden = false;
             }
         }
-
 
     </script>
 </body>
