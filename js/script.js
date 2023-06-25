@@ -57,9 +57,9 @@ function validateForm() {
     // Check if password contains at least one number and one letter
     const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
     if (!passwordRegex.test(password)) {
-        alert("Password must contain at least one number and one letter.");
+        alert("Password must contain at least one number and one uppercase letter.");
         return false;
     }
 
-    return alert("Form submitted.");
+    return true;
 }
