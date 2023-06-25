@@ -394,45 +394,7 @@
                                 Staff</a>
                         </h5>
                     </div>
-                    <div class="blog-card">
-                        <a href=""><img
-                                src="https://thumbor.forbes.com/thumbor/fit-in/365x/https://www.forbes.com/advisor/in/wp-content/uploads/2022/09/pexels-tara-winstead-7111606-scaled.jpg"
-                                alt="">
-                            <br>New Income Tax
-                            Slab
-                            For FY
-                            2023-24</a>
-                        <h5 style="font-size: xx-small;">
-                            <a href="">By Dipen Pradhan Forbes
-                                Staff</a>
-                        </h5>
-                    </div>
-                    <div class="blog-card">
-                        <a href=""><img
-                                src="https://thumbor.forbes.com/thumbor/fit-in/365x/https://www.forbes.com/advisor/in/wp-content/uploads/2022/09/pexels-tara-winstead-7111606-scaled.jpg"
-                                alt="">
-                            <br>New Income Tax
-                            Slab
-                            For FY
-                            2023-24</a>
-                        <h5 style="font-size: xx-small;">
-                            <a href="">By Dipen Pradhan Forbes
-                                Staff</a>
-                        </h5>
-                    </div>
-                    <div class="blog-card">
-                        <a href=""><img
-                                src="https://thumbor.forbes.com/thumbor/fit-in/365x/https://www.forbes.com/advisor/in/wp-content/uploads/2022/09/pexels-tara-winstead-7111606-scaled.jpg"
-                                alt="">
-                            <br>New Income Tax
-                            Slab
-                            For FY
-                            2023-24</a>
-                        <h5 style="font-size: xx-small;">
-                            <a href="">By Dipen Pradhan Forbes
-                                Staff</a>
-                        </h5>
-                    </div>
+                    
                     <!-- hidden -->
                     <div class="blog-card" hidden>
                         <a href=""><img
@@ -492,8 +454,8 @@
                 <br>
                 <hr class="bold-hr">
                 <h4 style="text-align: center;">We Help You Make Smart Financial Decisions</h4>
-                <hr>
-
+                <hr id="short">
+                <br>
             </div>
         </div>
 
@@ -512,12 +474,13 @@
         // javascript to show hidden blogcards
         function viewHidden() {
             var hiddenElements = document.querySelectorAll('.blog-card');
-            for (var i = 6; i < hiddenElements.length; i++) {
+            for (var i = 3; i < hiddenElements.length; i++) {
                 if (hiddenElements[i].hidden == true) {
                     hiddenElements[i].hidden = false;
                     // console.log(hiddenElements[i].hidden);
                     // changing the content to NO more Articles
                     document.querySelector('.articles p').innerHTML = "No More Articles";
+                    
                 }
                 else {
                     hiddenElements[i].hidden = true;
