@@ -173,21 +173,22 @@ main h3{
     color: white;
     width: fit-content;
     margin: 2em auto;
-    border-radius: 20px;
+    border-radius: 10px;
     
 }
 
-.bottom-article .articles a{
+.bottom-article .articles p{
     text-align: center;
     text-decoration: none;
     color: #d8d2c5;
     font-size: small;
 
 }
-.bottom-article .articles:hover a, .bottom-article:hover{
+.bottom-article:hover{
     color: white;
     transition: 0.2s;
-    transform: scale(0.95);
+    transform: scale(0.97);
+    cursor: pointer;
 }
 .qut{
     font-size: 100px;

@@ -227,7 +227,7 @@
     <main>
         <div class="main-body">
             <div class="main-content">
-                <!-- Context from Code Snippet index.html:<div class="main"> -->
+                <!-- Context from Code Snippet index.html: from main -->
                 <h3 style="text-align: center; font-size: medium;">Latest Guides & News</h3>
                 <hr id="short">
 
@@ -387,45 +387,7 @@
                                 Staff</a>
                         </h5>
                     </div>
-                    <div class="blog-card">
-                        <a href=""><img
-                                src="https://thumbor.forbes.com/thumbor/fit-in/365x/https://www.forbes.com/advisor/in/wp-content/uploads/2022/09/pexels-tara-winstead-7111606-scaled.jpg"
-                                alt="">
-                            <br>New Income Tax
-                            Slab
-                            For FY
-                            2023-24</a>
-                        <h5 style="font-size: xx-small;">
-                            <a href="">By Dipen Pradhan Forbes
-                                Staff</a>
-                        </h5>
-                    </div>
-                    <div class="blog-card">
-                        <a href=""><img
-                                src="https://thumbor.forbes.com/thumbor/fit-in/365x/https://www.forbes.com/advisor/in/wp-content/uploads/2022/09/pexels-tara-winstead-7111606-scaled.jpg"
-                                alt="">
-                            <br>New Income Tax
-                            Slab
-                            For FY
-                            2023-24</a>
-                        <h5 style="font-size: xx-small;">
-                            <a href="">By Dipen Pradhan Forbes
-                                Staff</a>
-                        </h5>
-                    </div>
-                    <div class="blog-card">
-                        <a href=""><img
-                                src="https://thumbor.forbes.com/thumbor/fit-in/365x/https://www.forbes.com/advisor/in/wp-content/uploads/2022/09/pexels-tara-winstead-7111606-scaled.jpg"
-                                alt="">
-                            <br>New Income Tax
-                            Slab
-                            For FY
-                            2023-24</a>
-                        <h5 style="font-size: xx-small;">
-                            <a href="">By Dipen Pradhan Forbes
-                                Staff</a>
-                        </h5>
-                    </div>
+                    
                     <!-- hidden -->
                     <div class="blog-card" hidden>
                         <a href=""><img
@@ -474,10 +436,9 @@
                 <br>
                 <hr id="short">
 
-                <div class="bottom-article">
+                <div onclick="viewHidden()" class="bottom-article">
                     <div class="articles">
-                        <a href="index.html">View More
-                            Articles</a>
+                        <p>View More Articles</p>
                     </div>
                 </div>
 
@@ -486,8 +447,8 @@
                 <br>
                 <hr class="bold-hr">
                 <h4 style="text-align: center;">We Help You Make Smart Financial Decisions</h4>
-                <hr>
-
+                <hr id="short">
+                <br>
             </div>
         </div>
 
@@ -502,6 +463,23 @@
                 document.querySelector('.header .sidebar').classList.toggle('show');
             });
         });
+
+        function viewHidden() {
+            var hiddenElements = document.querySelectorAll('.blog-card');
+            for (var i = 3; i < hiddenElements.length; i++) {
+                if (hiddenElements[i].hidden == true) {
+                    hiddenElements[i].hidden = false;
+                    // console.log(hiddenElements[i].hidden);
+                    // changing the content to NO more Articles
+                    document.querySelector('.articles p').innerHTML = "No More Articles";
+                    
+                }
+                else {
+                    hiddenElements[i].hidden = true;
+                    document.querySelector('.articles p').innerHTML = "View More Articles";
+                }
+            }
+        }
 
 
     </script>
