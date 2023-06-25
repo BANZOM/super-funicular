@@ -1,7 +1,14 @@
 main{
     zoom: 200%
 }
-
+/* css for main */
+.main-body {
+    margin-top: 30px;
+    /* margin-left: 30lvb;
+    margin-right: 30lvb; 
+    min-height: 150vh;  
+     background: blue; */
+}
 .main-content{
     padding-top: 2px;
 }
