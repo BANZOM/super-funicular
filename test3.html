@@ -483,8 +483,7 @@
 
                 <div class="bottom-article">
                     <div class="articles">
-                        <a href="index.html">View More
-                            Articles</a>
+                        <p onclick="viewHidden()">View More Articles</p>
                     </div>
                 </div>
 
@@ -497,7 +496,7 @@
 
             </div>
         </div>
-        
+
 
     </main>
 
@@ -510,7 +509,12 @@
             });
         });
 
-        
+        // javascript to show hidden blogcards
+        function viewHidden() {
+            document.querySelector('.blog-card').hidden = false;
+        }
+
+
     </script>
 </body>
 
