@@ -58,6 +58,14 @@ hr#short{
     margin-right: auto;
     /* margin-bottom: ; */
 }
+.tableBlogs div{
+    text-align: center;
+}
+.tableBlogs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 main h3{
     margin-top: 12px;
 }
@@ -176,7 +184,7 @@ main h3{
     font-size: small;
 
 }
-.bottom-article .articles a:hover, .bottom-article:hover{
+.bottom-article .articles:hover a, .bottom-article:hover{
     color: white;
     transition: 0.2s;
     transform: scale(0.95);
