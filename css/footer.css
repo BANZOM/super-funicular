@@ -1,6 +1,6 @@
-body {
+/* body {
     font-family: "Signika", sans-serif;
-}
+} */
 
 .bg-grey {
     background: #dfdedf;
@@ -68,17 +68,18 @@ footer ul li a {
 
 .container {
     max-width: 80%;
-    margin: 0 auto;
+    margin: auto;
+    padding-bottom: 20px;
 }
 
 .logo-part img {
-    height: 80px;
+    height: 89px;
     width: auto;
-    padding-top: 45px;
+    padding-top: 46px;
     text-align: center;
     display: block;
     margin: 0 auto;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     
 }
 
@@ -132,7 +133,7 @@ footer ul li a {
 }
 
 .footerNav ul li {
-    margin: 0 10px 100px;
+    margin: 0 10px 0px;
     opacity: 0.8;
     transition: 0.3s;
 }
