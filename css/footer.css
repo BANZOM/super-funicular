@@ -1,6 +1,6 @@
-body {
+/* body {
     font-family: "Signika", sans-serif;
-}
+} */
 
 .bg-grey {
     background: #dfdedf;
@@ -19,33 +19,6 @@ footer p,a {
     font-family: "Signika", sans-serif;
 }
 
-/* footer h6 {
-    font-family: "Playfair Display", serif;
-    margin-bottom: 40px;
-    position: relative;
-} */
-
-/* footer h6:after {
-    position: absolute;
-    content: "";
-    background: grey;
-    width: 12%;
-    height: 1px;
-    left: 0;
-    bottom: -20px;
-} */
-
-/* .btn-footer {
-    color: grey;
-
-    text-decoration: none;
-    border: 1px solid;
-    border-radius: 43px;
-    font-size: 13px;
-    padding: 7px 30px;
-    line-height: 47px;
-} */
-
 footer ul li {
     list-style: none;
     display: block;
@@ -61,24 +34,21 @@ footer ul li a {
     text-decoration: none;
 }
 
-/* a:hover {
-    text-decoration: none;
-    color: #f5f5f5 ;
-} */
 
 .container {
     max-width: 80%;
-    margin: 0 auto;
+    margin: auto;
+    padding-bottom: 20px;
 }
 
 .logo-part img {
-    height: 80px;
+    height: 89px;
     width: auto;
-    padding-top: 45px;
+    padding-top: 46px;
     text-align: center;
     display: block;
     margin: 0 auto;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     
 }
 
@@ -132,7 +102,7 @@ footer ul li a {
 }
 
 .footerNav ul li {
-    margin: 0 10px 100px;
+    margin: 0 10px 0px;
     opacity: 0.8;
     transition: 0.3s;
 }
