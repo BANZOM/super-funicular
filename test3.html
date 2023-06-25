@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+            user-select: none;
+        }
+
+        .header * {
+            color: aliceblue;
+        }
+
+        .header .topbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 60px;
+            width: 100%;
+            background: #222525;
+            display: flex;
+        }
+
+        .header .btn {
+            position: sticky;
+            top: 8px;
+            cursor: pointer;
+            left: 10px;
+            height: 45px;
+            width: 45px;
+            text-align: center;
+            background: #222525;
+            border-radius: 8px;
+            transition: 0.5s ease-in-out;
+        }
+
+        .header .logoblock {
+            width: 100%;
+            background-color: salmon;
+            display: flex;
+            align-items: center;
+        }
+
+        .header .logo {
+            position: static;            
+            height: 60px;
+            width: 100%;
+            text-align: center;
+            background-color: #222525;
+        }
+
+        .header .logo img {
+            width: auto;
+            height: 60px;
+        }
+        .header .rightblock{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60px;
+            width: 5lvb;
+        }
+        /* clicking buttom to open sidebar */
+        .header .btn.click {
+            left: 260px
+        }
+
+        .header .btn span {
+            font-size: 25px;
+            line-height: 45px;
+        }
+
+        /* after clicking button,changing icon synbol */
+        .header .btn.click span:before {
+            content: "\f00d";
+        }
+
+        .header .sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            height: 100%;
+            width: 250px;
+            background: #222525;
+            color: inherit;
+            transition: 0.5s ease-in-out;
+        }
+
+        /* showing the sidebar when clicking button */
+        .header .sidebar.show {
+            left: 0;
+        }
+
+        .header .sidebar .text {
+            color: aliceblue;
+            font-size: 25px;
+            font-weight: 600;
+            line-height: 65px;
+            letter-spacing: 2px;
+            text-align: center;
+            margin: 2%;
+        }
+
+        nav ul {
+            list-style: none;
+            background-color: #222525;
+            width: 100%;
+            height: 100%;
+        }
+
+        nav ul li {
+            line-height: 60px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        nav ul li a {
+            color: aliceblue;
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            padding-left: 40px;
+
+            position: relative;
+
+        }
+
+        nav ul li a:hover {
+            color: cyan;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-left: 3px solid cyan;
+        }
+
+        nav ul ul {
+            position: static;
+            display: none;
+        }
+
+        nav ul ul li {
+            line-height: 40px;
+            border-bottom: none;
+        }
+
+        nav ul ul li a {
+            padding-left: 80px;
+        }
+
+        nav ul li:hover>ul {
+            display: block;
+        }
+
+        nav ul li a span {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            font-size: 22px;
+            transition: transform 0.3s;
+        }
+
+        nav ul li a:hover span {
+            color: cyan;
+            transform: translateY(-50%) rotate(-180deg);
+
+        }
+
+        /* css for main */
+        .main-body {
+            margin-top: 30px;
+            /* margin-left: 30lvb;
+            margin-right: 30lvb; 
+            min-height: 150vh;  */
+            /* background: blue; */
+        }
+    </style>
+    <link rel="stylesheet" href="blog-css.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="topbar">
+            <div class="btn">
+                <span class="fas fa-bars"></span>
+            </div>
+            <div class="logoblock">
+                <div class="logo">
+                    <span><a href="index.html">
+                            <img src="assets/FunicularLogo-black.png" alt="FunicularLogo"></a></a></span>
+                </div>
+            </div>
+            <div class="rightblock">
+
+            </div>
+        </div>
+        <nav class="sidebar">
+            <div class="text">Menu</div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="#" id="team">Our Team <span class="fa fa-caret-down"></span></a>
+
+                    <ul>
+                        <li><a href="aditya">Aditya</a></li>
+                        <li><a href="Adityatomar">Aditya Tomar</a></li>
+                        <li><a href="Akshit">Akshit Tyagi</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="main-body">
+            <div class="main-content">
+                <!-- Context from Code Snippet index.html:<div class="main"> -->
+                    <h3 style="text-align: center;">Latest Guides & News</h3>
+            <hr>
+
+            <!-- -->
+            <div class="postfiltercontainer">
+                <span class="filteritemactive-filter" data-filter="advisor">Trending</span>
+                <span class="filteritem" data-filter="Investing">Finance</span>
+                <span class="filteritem" data-filter="cards">Banking</span>
+                <span class="filteritem" data-filter="Personal">Debits</span>
+                <span class="filteritem" data-filter="Home">Credits</span>
+                <span class="filteritem" data-filter="Life">Extras</span>
+            </div>
+            <br>
+            <section class="postcontainer">
+                <div class="postbox1">
+                    <img src="https://thumbor.forbes.com/thumbor/fit-in/770x/https://www.forbes.com/advisor/in/wp-content/uploads/2022/09/pexels-anna-nekrashevich-6801874-scaled.jpg"
+                        alt="Penny Stocks to Buy Today in India June 2023" height="500px" width="auto" class="post1">
+
+                    <div class="headblog">
+                        <a href="Pennystocks.html">Best Penny stocks to Buy Today in India June 2023</a>
+                    </div>
+                    <h5 style="font-size: larger;">
+                        <a href="" style="color: black;  text-decoration: none;">By Ashika Jain</a>
+                    </h5>
+                </div>
+                <table class="tableBlogs">
+                    <tr>
+                        <th>
+                            <div class="postbox2">
+                                <img src="https://thumbor.forbes.com/thumbor/fit-in/370x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/05/c4900606-b192-4a2e-b2af-2b26a5f8b7d4-scaled.jpg"
+                                    alt="" height="150" width="auto" class="post2">
+                                <br>
+                                <a href="" style="color: #3c3c3c;;  text-decoration: none; margin-top: 2px;">What Are
+                                    Index Futures and How
+                                    do they
+                                    work?</a>
+                                <h5 style="font-size: x-small; margin-top: 2px;">
+                                    <a href="" style="color: black;  text-decoration: none;">By Rahul Jain</a>
+                                </h5>
+
+                            </div>
+                        </th>
+                        <th>
+                            <div class="postbox3">
+                                <img src="https://thumbor.forbes.com/thumbor/fit-in/300x/https://www.forbes.com/advisor/in/wp-content/uploads/2022/07/pexels-pixabay-164636-1.jpg"
+                                    alt="" height="150" width="auto" class="post3">
+                                <br>
+                                <a href="" style="color: #3c3c3c;;  text-decoration: none; margin-top: 2px;">Inflation
+                                    Rate in India: June
+                                    2023
+                                    Data</a>
+                                <h5 style="font-size: x-small; margin-top: 2px;">
+                                    <a href="" style="color: black;  text-decoration: none;">By Dipen Pradhan</a>
+                                </h5>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <div class="postbox3">
+                                <img src="https://thumbor.forbes.com/thumbor/fit-in/370x/https://www.forbes.com/advisor/in/wp-content/uploads/2022/09/pexels-prabaharan-balaji-6562010-Edited-1.png"
+                                    alt="" height="150" width="auto" class="post4">
+                                <br>
+                                <a href="" style="color: #3c3c3c;;  text-decoration: none; margin-top: 2px;">How digital
+                                    rupee
+                                    is
+                                    different from cryptocurrency?</a>
+                                <h5 style="font-size: x-small; margin-top: 2px;">
+                                    <a href="" style="color: black;  text-decoration: none;">By Kunal Verma</a>
+                                </h5>
+                            </div>
+                        </th>
+                        <th>
+                            <div class="postbox4">
+                                <img src="https://thumbor.forbes.com/thumbor/fit-in/300x/https://www.forbes.com/advisor/in/wp-content/uploads/2022/11/pexels-cup-of-couple-6633599.png"
+                                    alt="" height="150" width="auto" class="post5">
+                                <br>
+                                <a href="" style="color: #3c3c3c;;  text-decoration: none; margin-top: 2px;">How to
+                                    apply for Credit card in
+                                    2023?</a>
+                                <h5 style="font-size: x-small; margin-top: 2px;">
+                                    <a href="" style="color: black;  text-decoration: none;">By Arman Joshi</a>
+                                </h5>
+                        </th>
+                    </tr>
+                </table>
+            </section>
+            <br>
+
+            <h3 style="text-align: center;">
+                <bold>From the Editor...</bold>
+            </h3>
+            <div style="display: flex; justify-content: space-around;">
+                <span class="qut">&ldquo;</span>
+                <p style="color: gray; text-align: center; padding-left: 3vw;padding-right: 3vw;"> Money management has
+                    become a necessity more than a skill in today's dynamicgrowth environment in India. How you
+                    save,insure, borrow and invest your money today will help decide the quality of your life in the
+                    future. We bring in-depth analysis to help you make smart decisions for a better tomorrow.
+                </p>
+                <span class="qut">&rdquo;</span>
+            </div>
+            <br>
+            <hr class="bold-hr">
+
+            <h4 style="text-align: center;">Our Latest Guides</h4>
+            <div class="guide">
+
+                <table class="guide">
+                    <tr>
+                        <th><img src="https://thumbor.forbes.com/thumbor/fit-in/365x/https://www.forbes.com/advisor/in/wp-content/uploads/2022/09/pexels-tara-winstead-7111606-scaled.jpg"
+                                alt="" height="100" width="200">
+                            <br>
+                            <a href="" style="font-size: small; color: black;  text-decoration: none;">New Income Tax
+                                Slab
+                                For FY
+                                2023-24</a>
+                            <h5 style="font-size: xx-small;">
+                                <a href="" style="color: black;  text-decoration: none;">By Dipen Pradhan Forbes
+                                    Staff</a>
+                            </h5>
+                        </th>
+                        <th>
+                            <img src="https://thumbor.forbes.com/thumbor/fit-in/365x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/06/Chinese-number-system.jpg"
+                                alt="" height="100" width="200">
+                            <br>
+                            <a href="" style="font-size: small; color: black;  text-decoration: none;">Learning the
+                                chinese
+                                number
+                                system</a>
+                            <h5 style="font-size: xx-small;">
+                                <a href="" style="color: black;  text-decoration: none;">By Nikita Tambe Forbes
+                                    Staff</a>
+                            </h5>
+                        </th>
+
+                        <th>
+                            <img src="https://thumbor.forbes.com/thumbor/fit-in/365x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/02/pexels-rodnae-productions-8369767-1-scaled.jpg"
+                                alt="" height="100" width="200">
+                            <br>
+                            <a href=""
+                                style="font-size: small; color: black;  text-decoration: none; margin-right: 10px;">Why
+                                is
+                                the Crypto market rising today?</a>
+                            <h5 style="font-size: xx-small;">
+                                <a href="" style="color: black; text-decoration: none;">By Rashi maheshwari Editor</a>
+                            </h5>
+                        </th>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <img src="https://thumbor.forbes.com/thumbor/fit-in/365x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/01/pexels-rodnae-productions-8370752_.png"
+                                alt="" height="100" width="200">
+                            <br>
+                            <a href=""
+                                style="font-size: small; color: black;  text-decoration: none; margin-right: 10px;">Fear
+                                And
+                                Greed Index Of Crypto In June 2023</a>
+                            <h5 style="font-size: xx-small;">
+                                <a href="" style="color: black; text-decoration: none;">By Rashi maheshwari Editor</a>
+                            </h5>
+                        </th>
+                        <th>
+                            <img src="https://thumbor.forbes.com/thumbor/fit-in/365x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/06/pexels-leeloo-thefirst-8970687-Cropped.jpg"
+                                alt="" height="100" width="200">
+                            <br><a href=""
+                                style="font-size: small; color: black;  text-decoration: none; margin-right: 10px;">Squarespace
+                                Pricing Plans(2023 Guide)</a>
+                            <h5 style="font-size: xx-small;">
+                                <a href="" style="color: black; text-decoration: none;">By Jeff White Contributor</a>
+                            </h5>
+                        </th>
+                        <th>
+                            <img src="https://thumbor.forbes.com/thumbor/fit-in/365x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/06/Untitled-design-81.png"
+                                alt="" height="100" width="200">
+                            <br>
+                            <a href=""
+                                style="font-size: small; color: black;  text-decoration: none; margin-right: 10px;">Squarespace
+                                Vs
+                                Shopify(2023 Comparison) </a>
+                            <h5 style="font-size: xx-small;">
+                                <a href="" style="color: black; text-decoration: none;">By Laura Hannigan
+                                    Contributor</a>
+                            </h5>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div class="bottom-article">
+                <div class="articles">
+
+                    <a href="index.html">View More
+                        Articles</a>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <br>
+            <hr class="bold-hr">
+            <h4 style="text-align: center;">We Help You Make Smart Financial Decisions</h4>
+            <hr>
+
+        </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        // javascript code to toggle class
+        document.querySelectorAll('.header .btn').forEach(function (button) {
+            button.addEventListener('click', function () {
+                this.classList.toggle('click');
+                document.querySelector('.header .sidebar').classList.toggle('show');
+            });
+        });
+
+    </script>
+</body>
+
+</html>
