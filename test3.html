@@ -515,11 +515,14 @@
             for (var i = 6; i < hiddenElements.length; i++) {
                 if (hiddenElements[i].hidden == true) {
                     hiddenElements[i].hidden = false;
+                    // console.log(hiddenElements[i].hidden);
+                    // changing the content to NO more Articles
+                    document.querySelector('.articles p').innerHTML = "No More Articles";
                 }
                 else {
                     hiddenElements[i].hidden = true;
+                    document.querySelector('.articles p').innerHTML = "View More Articles";
                 }
-                
             }
         }
 
