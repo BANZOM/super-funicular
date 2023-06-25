@@ -512,8 +512,14 @@
         // javascript to show hidden blogcards
         function viewHidden() {
             var hiddenElements = document.querySelectorAll('.blog-card');
-            for (var i = 0; i < hiddenElements.length; i++) {
-                hiddenElements[i].hidden = false;
+            for (var i = 6; i < hiddenElements.length; i++) {
+                if (hiddenElements[i].hidden == true) {
+                    hiddenElements[i].hidden = false;
+                }
+                else {
+                    hiddenElements[i].hidden = true;
+                }
+                
             }
         }
 
